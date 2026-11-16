@@ -1,14 +1,12 @@
-# Best Practices Guide / 最佳实践指南
+# Best Practices Guide
 
-## 📖 Introduction / 简介
+## 📖 Introduction
 
 This guide provides best practices for using CTF-MCP effectively and safely. Following these guidelines will help you maximize the tool's capabilities while maintaining security and ethical standards.
 
-本指南提供了有效且安全使用 CTF-MCP 的最佳实践。遵循这些指南将帮助您最大化工具的能力，同时保持安全和道德标准。
+## 🎯 General Principles
 
-## 🎯 General Principles / 通用原则
-
-### 1. Start with Reconnaissance / 从侦察开始
+### 1. Start with Reconnaissance
 Always begin with information gathering before attempting exploitation:
 
 ```
@@ -18,7 +16,7 @@ Always begin with information gathering before attempting exploitation:
 ✓ Use fingerprint_engine for detailed fingerprinting
 ```
 
-### 2. Understand Before Acting / 先理解再行动
+### 2. Understand Before Acting
 ```
 ✓ Read tool descriptions before use
 ✓ Check risk levels (LOW → MEDIUM → HIGH → CRITICAL)
@@ -26,7 +24,7 @@ Always begin with information gathering before attempting exploitation:
 ✓ Know the potential impact
 ```
 
-### 3. Progress Gradually / 逐步推进
+### 3. Progress Gradually
 ```
 ✓ Start with passive reconnaissance
 ✓ Move to active scanning
@@ -34,9 +32,9 @@ Always begin with information gathering before attempting exploitation:
 ✓ Finally, exploitation (with authorization)
 ```
 
-## 🔍 Reconnaissance Phase / 侦察阶段
+## 🔍 Reconnaissance Phase
 
-### Information Gathering Workflow / 信息收集工作流
+### Information Gathering Workflow
 
 ```python
 # Step 1: Technology Detection
@@ -55,7 +53,7 @@ dir_bruteforce(url="https://target.com")
 fingerprint_engine(url="https://target.com")
 ```
 
-### Best Practices for Recon / 侦察最佳实践
+### Best Practices for Recon
 
 **DO:**
 - ✅ Use multiple tools to cross-verify findings
@@ -69,9 +67,9 @@ fingerprint_engine(url="https://target.com")
 - ❌ Ignore robots.txt and security.txt
 - ❌ Overwhelm targets with requests
 
-## 🔐 Vulnerability Detection / 漏洞检测
+## 🔐 Vulnerability Detection
 
-### Systematic Approach / 系统化方法
+### Systematic Approach
 
 ```python
 # 1. Start with automated scanning
@@ -86,7 +84,7 @@ ssrf_detect(url="https://target.com/fetch?url=example.com")
 verify_vuln(url="...", param="...", vuln_type="sqli")
 ```
 
-### Testing Guidelines / 测试指南
+### Testing Guidelines
 
 **Input Validation Testing:**
 ```
@@ -112,9 +110,7 @@ verify_vuln(url="...", param="...", vuln_type="sqli")
 ✓ Verify CORS with cors_deep_check
 ```
 
-## 🎯 CTF Challenge Solving / CTF 挑战解决
-
-### Using AI Assistant / 使用 AI 助手
+### Using AI Assistant
 
 The AI assistant can help analyze challenges and suggest approaches:
 
@@ -133,7 +129,7 @@ challenge_info = {
 # - Next actions
 ```
 
-### Workflow System / 工作流系统
+### Workflow System
 
 Use pre-built workflows for common scenarios:
 
@@ -151,7 +147,7 @@ workflow = CTFWorkflowTemplates.pwn_exploit_workflow()
 workflow.execute(initial_context={"binary_path": "./challenge"})
 ```
 
-### Category-Specific Tips / 分类特定技巧
+### Category-Specific Tips
 
 **Web Challenges:**
 ```
@@ -180,9 +176,9 @@ workflow.execute(initial_context={"binary_path": "./challenge"})
 5. Craft exploit payload
 ```
 
-## 🛠️ Tool Selection Guide / 工具选择指南
+## 🛠️ Tool Selection Guide
 
-### By Risk Level / 按风险级别
+### By Risk Level
 
 **🟢 LOW Risk - Safe for Initial Testing:**
 ```
@@ -221,7 +217,7 @@ workflow.execute(initial_context={"binary_path": "./challenge"})
 - lateral_*_exec
 ```
 
-### By Use Case / 按使用场景
+### By Use Case
 
 **Information Gathering:**
 ```
@@ -254,9 +250,9 @@ lateral_smb_exec → SMB lateral movement
 lateral_ssh_exec → SSH lateral movement
 ```
 
-## 📊 Result Interpretation / 结果解释
+## 📊 Result Interpretation
 
-### Understanding Output / 理解输出
+### Understanding Output
 
 **Vulnerability Detection Results:**
 ```json
@@ -275,7 +271,7 @@ lateral_ssh_exec → SSH lateral movement
 - ✅ Proof of concept
 - ✅ Remediation advice
 
-### False Positives / 误报
+### False Positives
 
 **How to verify findings:**
 ```
@@ -286,9 +282,9 @@ lateral_ssh_exec → SSH lateral movement
 5. Analyze the actual response
 ```
 
-## 🔄 Automation Best Practices / 自动化最佳实践
+## 🔄 Automation Best Practices
 
-### Using Smart Pentest / 使用智能渗透
+### Using Smart Pentest
 
 ```python
 # AI-powered automated testing
@@ -305,7 +301,7 @@ smart_pentest(
 - Performance optimization
 - Learning from results
 
-### Task Management / 任务管理
+### Task Management
 
 ```python
 # Submit long-running tasks
@@ -321,9 +317,9 @@ task_status(task_id=task_id)
 task_list(limit=20)
 ```
 
-## 🔒 Security Considerations / 安全考虑
+## 🔒 Security Considerations
 
-### Protecting Your Testing Environment / 保护测试环境
+### Protecting Your Testing Environment
 
 **Network Isolation:**
 ```
@@ -341,7 +337,7 @@ task_list(limit=20)
 ✓ Follow data retention policies
 ```
 
-### Avoiding Detection / 避免检测
+### Avoiding Detection
 
 **Legitimate Testing Techniques:**
 ```
@@ -353,9 +349,9 @@ task_list(limit=20)
 
 **Note:** These techniques are for authorized testing only. Do not use for malicious purposes.
 
-## 📝 Documentation and Reporting / 文档和报告
+## 📝 Documentation and Reporting
 
-### During Testing / 测试期间
+### During Testing
 
 **Keep detailed notes:**
 ```
@@ -366,7 +362,7 @@ task_list(limit=20)
 ✓ Save all evidence
 ```
 
-### Report Generation / 报告生成
+### Report Generation
 
 ```python
 # Generate comprehensive report
@@ -385,9 +381,9 @@ generate_report(
 - Remediation recommendations
 - Timeline of activities
 
-## 🎓 Learning Resources / 学习资源
+## 🎓 Learning Resources
 
-### Recommended Practice / 推荐练习
+### Recommended Practice
 
 **CTF Platforms:**
 - HackTheBox
@@ -401,7 +397,7 @@ generate_report(
 - Juice Shop
 - VulnHub
 
-### Skill Development / 技能发展
+### Skill Development
 
 **Beginner Path:**
 ```
@@ -430,9 +426,9 @@ generate_report(
 5. Present at conferences
 ```
 
-## ⚠️ Common Mistakes to Avoid / 常见错误避免
+## ⚠️ Common Mistakes to Avoid
 
-### Technical Mistakes / 技术错误
+### Technical Mistakes
 
 ```
 ❌ Not reading tool documentation
@@ -444,7 +440,7 @@ generate_report(
 ❌ Not understanding the target
 ```
 
-### Ethical Mistakes / 道德错误
+### Ethical Mistakes
 
 ```
 ❌ Testing without authorization
@@ -455,7 +451,7 @@ generate_report(
 ❌ Ignoring legal boundaries
 ```
 
-### Operational Mistakes / 操作错误
+### Operational Mistakes
 
 ```
 ❌ Not documenting activities
@@ -466,9 +462,9 @@ generate_report(
 ❌ Testing on production without approval
 ```
 
-## 🚀 Advanced Techniques / 高级技巧
+## 🚀 Advanced Techniques
 
-### Chaining Vulnerabilities / 漏洞链
+### Chaining Vulnerabilities
 
 ```python
 # Example: SSRF → Internal Port Scan → RCE
@@ -478,7 +474,7 @@ generate_report(
 4. Exploit internal service for RCE
 ```
 
-### Custom Workflows / 自定义工作流
+### Custom Workflows
 
 ```python
 # Create custom workflow
@@ -499,7 +495,7 @@ workflow.add_node(WorkflowNode(
 workflow.execute(initial_context={"target": "..."})
 ```
 
-### Performance Optimization / 性能优化
+### Performance Optimization
 
 ```python
 # Use caching
@@ -511,9 +507,9 @@ perf_summary()  # Get performance summary
 perf_bottlenecks()  # Identify bottlenecks
 ```
 
-## 📞 Getting Help / 获取帮助
+## 📞 Getting Help
 
-### When You're Stuck / 遇到困难时
+### When You're Stuck
 
 ```
 1. Check tool documentation
@@ -524,7 +520,7 @@ perf_bottlenecks()  # Identify bottlenecks
 6. Check SECURITY.md
 ```
 
-### Community Resources / 社区资源
+### Community Resources
 
 - GitHub Issues for bug reports
 - Discord/Slack for discussions
@@ -533,9 +529,9 @@ perf_bottlenecks()  # Identify bottlenecks
 
 ---
 
-## 📋 Quick Reference / 快速参考
+## 📋 Quick Reference
 
-### Essential Commands / 基本命令
+### Essential Commands
 
 ```bash
 # Information Gathering
@@ -558,7 +554,7 @@ exploit_sqli_extract(url="...", param="...")
 lateral_smb_exec(target="...", username="...", password="...")
 ```
 
-### Risk Level Quick Check / 风险级别快速检查
+### Risk Level Quick Check
 
 ```
 🟢 Information gathering → Safe
@@ -570,7 +566,5 @@ lateral_smb_exec(target="...", username="...", password="...")
 ---
 
 **Remember: Always prioritize safety, legality, and ethics in your security testing activities.**
-
-**记住：在安全测试活动中始终优先考虑安全、合法和道德。**
 
 Last updated: 2026-01-12

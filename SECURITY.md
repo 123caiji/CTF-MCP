@@ -1,12 +1,10 @@
-# Security Policy / 安全策略
+# Security Policy
 
-## 🔒 Security Statement / 安全声明
+## 🔒 Security Statement
 
 CTF-MCP is a security tool collection designed for **authorized security testing only**. This project provides powerful tools that can be dangerous if misused.
 
-CTF-MCP 是一个专为**授权安全测试**设计的安全工具集。本项目提供的强大工具如果被滥用可能造成危险。
-
-## ⚠️ Critical Warning / 重要警告
+## ⚠️ Critical Warning
 
 **ONLY USE FOR:**
 - ✅ Authorized penetration testing with written permission
@@ -15,13 +13,6 @@ CTF-MCP 是一个专为**授权安全测试**设计的安全工具集。本项�
 - ✅ Educational purposes in lab environments
 - ✅ Testing your own systems
 
-**仅用于：**
-- ✅ 获得书面授权的渗透测试
-- ✅ CTF（夺旗赛）竞赛
-- ✅ 受控环境中的安全研究
-- ✅ 实验环境中的教育目的
-- ✅ 测试您自己的系统
-
 **NEVER USE FOR:**
 - ❌ Unauthorized access to systems
 - ❌ Malicious attacks
@@ -29,14 +20,7 @@ CTF-MCP 是一个专为**授权安全测试**设计的安全工具集。本项�
 - ❌ Denial of Service (DoS) attacks
 - ❌ Any illegal activities
 
-**禁止用于：**
-- ❌ 未经授权访问系统
-- ❌ 恶意攻击
-- ❌ 数据窃取或破坏
-- ❌ 拒绝服务（DoS）攻击
-- ❌ 任何非法活动
-
-## 🎯 Risk Levels / 风险级别
+## 🎯 Risk Levels
 
 CTF-MCP uses a four-level risk classification system:
 
@@ -65,13 +49,11 @@ CTF-MCP uses a four-level risk classification system:
 - Can cause severe damage
 - **Requires written authorization**
 
-## 📊 Security Audit Statistics / 安全审计统计
+## 📊 Security Audit Statistics
 
 CTF-MCP has undergone a comprehensive security audit. All dangerous operations are protected with `@dangerous_operation` decorators that display warnings before execution.
 
-CTF-MCP 已完成全面的安全审计。所有危险操作都使用 `@dangerous_operation` 装饰器保护，在执行前会显示警告。
-
-### Overall Statistics / 总体统计
+### Overall Statistics
 - **Total Security Decorators**: 33
 - **Modules Audited**: 6
 - **Risk Distribution**:
@@ -80,7 +62,7 @@ CTF-MCP 已完成全面的安全审计。所有危险操作都使用 `@dangerous
   - 🟡 MEDIUM: 6 tools
   - 🟢 LOW: All other tools (no decorator needed)
 
-### Module Breakdown / 模块分解
+### Module Breakdown
 
 | Module | Total Decorators | CRITICAL | HIGH | MEDIUM |
 |--------|-----------------|----------|------|--------|
@@ -92,11 +74,9 @@ CTF-MCP 已完成全面的安全审计。所有危险操作都使用 `@dangerous
 | **forensics.py** | 0 | 0 | 0 | 0 |
 | **Total** | **33** | **14** | **13** | **6** |
 
-## 🚨 Critical Risk Tools / 高危工具
+## 🚨 Critical Risk Tools
 
 The following tools are classified as **CRITICAL** risk and will display security warnings before use:
-
-以下工具被分类为**高危**风险，使用前会显示安全警告：
 
 ### Binary Exploitation (pwn.py) - 7 tools
 - `shellcode_gen` - Generate executable shellcode for various architectures
@@ -118,11 +98,9 @@ The following tools are classified as **CRITICAL** risk and will display securit
 - `cmd_injection` - OS command injection payloads
 - `cmd_blind` - Blind command injection techniques (time-based, OOB)
 
-## 🟠 High Risk Tools / 高风险工具
+## 🟠 High Risk Tools
 
 The following tools are classified as **HIGH** risk:
-
-以下工具被分类为**高风险**：
 
 ### Binary Exploitation (pwn.py) - 2 tools
 - `shellcode_encode` - Encode shellcode to avoid detection and bypass filters
@@ -140,11 +118,9 @@ The following tools are classified as **HIGH** risk:
 ### Cryptography (crypto.py) - 1 tool
 - `hash_crack` - Password hash cracking with wordlists
 
-## 🟡 Medium Risk Tools / 中风险工具
+## 🟡 Medium Risk Tools
 
 The following tools are classified as **MEDIUM** risk:
-
-以下工具被分类为**中风险**：
 
 ### Web Exploitation (web.py) - 2 tools
 - `xss_payloads` - Cross-Site Scripting payloads for client-side attacks
@@ -159,9 +135,9 @@ The following tools are classified as **MEDIUM** risk:
 ### Reverse Engineering (reverse.py) - 1 tool
 - `asm` - Generate executable machine code from assembly instructions
 
-## 🛡️ Security Best Practices / 安全最佳实践
+## 🛡️ Security Best Practices
 
-### 1. Authorization / 授权
+### 1. Authorization
 ```
 ✓ Always obtain written authorization before testing
 ✓ Document the scope of testing
@@ -169,7 +145,7 @@ The following tools are classified as **MEDIUM** risk:
 ✓ Respect the agreed-upon scope and timeline
 ```
 
-### 2. Environment Isolation / 环境隔离
+### 2. Environment Isolation
 ```
 ✓ Use isolated lab environments for testing
 ✓ Never test on production systems without approval
@@ -177,7 +153,7 @@ The following tools are classified as **MEDIUM** risk:
 ✓ Implement network segmentation
 ```
 
-### 3. Data Protection / 数据保护
+### 3. Data Protection
 ```
 ✓ Handle discovered vulnerabilities responsibly
 ✓ Protect sensitive data found during testing
@@ -185,7 +161,7 @@ The following tools are classified as **MEDIUM** risk:
 ✓ Encrypt test reports and findings
 ```
 
-### 4. Tool Usage / 工具使用
+### 4. Tool Usage
 ```
 ✓ Read tool descriptions before use
 ✓ Understand the risk level of each tool
@@ -194,7 +170,7 @@ The following tools are classified as **MEDIUM** risk:
 ✓ Monitor and log all testing activities
 ```
 
-### 5. Legal Compliance / 法律合规
+### 5. Legal Compliance
 ```
 ✓ Comply with local laws and regulations
 ✓ Respect computer fraud and abuse laws
@@ -202,7 +178,7 @@ The following tools are classified as **MEDIUM** risk:
 ✓ Maintain professional ethics
 ```
 
-## 📋 Pre-Testing Checklist / 测试前检查清单
+## 📋 Pre-Testing Checklist
 
 Before using CTF-MCP tools, verify:
 
@@ -215,11 +191,11 @@ Before using CTF-MCP tools, verify:
 - [ ] I have proper logging and monitoring in place
 - [ ] I have a rollback plan if something goes wrong
 
-## 🔐 Security Features / 安全特性
+## 🔐 Security Features
 
 CTF-MCP includes built-in security features:
 
-### 1. Risk Warnings / 风险警告
+### 1. Risk Warnings
 All CRITICAL risk tools display warnings before execution:
 ```
 🔴 CRITICAL RISK - Use with extreme caution
@@ -230,23 +206,23 @@ This payload can be dangerous. Only use for:
 - Educational purposes
 ```
 
-### 2. Input Validation / 输入验证
+### 2. Input Validation
 - Path traversal protection
 - Command injection prevention
 - SQL injection prevention in tool parameters
 - File size and type validation
 
-### 3. Timeout Protection / 超时保护
+### 3. Timeout Protection
 - Automatic timeout for long-running operations
 - Prevents resource exhaustion
 - Configurable timeout limits
 
-### 4. Audit Logging / 审计日志
+### 4. Audit Logging
 - Tool usage logging (when enabled)
 - Timestamp and user tracking
 - Command history
 
-## 🐛 Reporting Security Issues / 报告安全问题
+## 🐛 Reporting Security Issues
 
 ### Found a vulnerability in CTF-MCP?
 
@@ -273,7 +249,7 @@ We will respond within 48 hours and work with you on:
 - Day 15-30: Coordinated disclosure
 - Day 30+: Public disclosure (if not resolved)
 
-## ⚖️ Legal Disclaimer / 法律免责声明
+## ⚖️ Legal Disclaimer
 
 **IMPORTANT LEGAL NOTICE:**
 
@@ -297,14 +273,14 @@ The developers and contributors of CTF-MCP:
 
 ---
 
-## 📚 Additional Resources / 其他资源
+## 📚 Additional Resources
 
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [PTES - Penetration Testing Execution Standard](http://www.pentest-standard.org/)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [Responsible Disclosure Guidelines](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html)
 
-## 📞 Contact / 联系方式
+## 📞 Contact
 
 For security-related questions or concerns:
 - GitHub Issues (for general questions): [CTF-MCP Issues](https://github.com/yourusername/CTF-MCP/issues)
@@ -313,7 +289,5 @@ For security-related questions or concerns:
 ---
 
 **Remember: With great power comes great responsibility. Use CTF-MCP ethically and legally.**
-
-**记住：能力越大，责任越大。请合法、道德地使用 CTF-MCP。**
 
 Last updated: 2026-01-12
